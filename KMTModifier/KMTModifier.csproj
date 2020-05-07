@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4CB9A10B-63D0-41F4-BFF1-A6112437F1F4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>KMTModifier</RootNamespace>
+    <AssemblyName>KMT Modifier</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon_KMTModifier.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="KMT">
+      <HintPath>KMT.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CurrentMissionOptions.cs" />
+    <Compile Include="Ex.cs" />
+    <Compile Include="Form_About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_About.Designer.cs">
+      <DependentUpon>Form_About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_CharVeh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_CharVeh.Designer.cs">
+      <DependentUpon>Form_CharVeh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Course.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Course.Designer.cs">
+      <DependentUpon>Form_Course.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_CPUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_CPUs.Designer.cs">
+      <DependentUpon>Form_CPUs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main.Designer.cs">
+      <DependentUpon>Form_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MissionEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MissionEditor.Designer.cs">
+      <DependentUpon>MissionEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MissionSetView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MissionSetView.Designer.cs">
+      <DependentUpon>MissionSetView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form_About.resx">
+      <DependentUpon>Form_About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_CharVeh.resx">
+      <DependentUpon>Form_CharVeh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Course.resx">
+      <DependentUpon>Form_Course.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_CPUs.resx">
+      <DependentUpon>Form_CPUs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Main.resx">
+      <DependentUpon>Form_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MissionEditor.resx">
+      <DependentUpon>MissionEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MissionSetView.resx">
+      <DependentUpon>MissionSetView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="arrow_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="arrow_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon_KMTModifier.ico" />
+    <None Include="logo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
